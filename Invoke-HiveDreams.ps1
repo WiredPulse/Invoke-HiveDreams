@@ -15,7 +15,6 @@
 #>
 
 function Test-Administrator {
-    # Tests to make sure the user is an administrator
     $user = [Security.Principal.WindowsIdentity]::GetCurrent();
     (New-Object Security.Principal.WindowsPrincipal $user).IsInRole([Security.Principal.WindowsBuiltinRole]::Administrator)
 }
